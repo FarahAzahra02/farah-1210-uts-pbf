@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "d1424a4a-ec8f-4e3d-9e82-b51060065e0a",
+		"name": "CRUD UTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33707192"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW5pc3RyYXRvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjI0NjI1MCwiZXhwIjoxNzE2MjUzNDUwfQ.dFhccCYtD-izXBuRgGwGm_5lPEPmD4Xknfbxbw0f0SQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\" : 1,\r\n    \"name\" : \"BNB Barenblis Velvet Lip Glosh\",\r\n    \"description\" : \"LipGlosh Special Crhismast\",\r\n    \"price\" : 59650,\r\n    \"image\" : \"img.jpg\",\r\n    \"expired_at\" : \"2026-10-10\",\r\n    \"modified_by\"  : \"admin@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://farahutspbf.sipsimpangan.com/public/api/product",
+							"protocol": "https",
+							"host": [
+								"farahutspbf",
+								"sipsimpangan",
+								"com"
+							],
+							"path": [
+								"public",
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW5pc3RyYXRvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjI0NjI1MCwiZXhwIjoxNzE2MjUzNDUwfQ.dFhccCYtD-izXBuRgGwGm_5lPEPmD4Xknfbxbw0f0SQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\" : 1,\r\n    \"name\" : \"BNB Barenblis Cushion Bloomatte\",\r\n    \"description\" : \"New Cushion Blomatte\",\r\n    \"price\" : 129650,\r\n    \"image\" : \"img.jpg\",\r\n    \"expired_at\" : \"2026-10-01\",\r\n    \"modified_by\"  : \"admin@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://farahutspbf.sipsimpangan.com/public/api/product/3",
+							"protocol": "https",
+							"host": [
+								"farahutspbf",
+								"sipsimpangan",
+								"com"
+							],
+							"path": [
+								"public",
+								"api",
+								"product",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjMyM2IyMTRhZTY5NzVhMGYwMzRlYTc3MzU0ZGMwYzI1ZDAzNjQyZGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNzc3Mjg1NDg0NjI1LWYzNDdjN3Frb2RuaDMxdm11YzJpbmJvdm1pODl0NnBpLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNzc3Mjg1NDg0NjI1LWYzNDdjN3Frb2RuaDMxdm11YzJpbmJvdm1pODl0NnBpLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTE2NTc1ODg3MTg5OTkyMDM0Mjc2IiwiaGQiOiJtaHMudWJwa2FyYXdhbmcuYWMuaWQiLCJlbWFpbCI6ImlmMjIuZmFyYWh6YWhyYUBtaHMudWJwa2FyYXdhbmcuYWMuaWQiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IlZic2Z2bEZYQ0ExQ3lyTzFqLTdyMVEiLCJpYXQiOjE3MTYyMTI3OTYsImV4cCI6MTcxNjIxNjM5Nn0.bqeJh4Lea0rZHRz7OdTzxGYAtExd0n3NROCOeLJbvUCOTvitnv08bhlvCz3acdIOy0qwmeGjXsLmlMO05JWAO9tBO-Ilu4AivhygOIgQDNejuIX_QPxkmIER0crwRHOxj_hniQ3etdIzvtPamc_VxhZcnqq1bewfqcyw4n_-ehNHXbiwcHYVPxbMFFTE-_2PW0xzZw2pm6o3O9zqO5gX2F0DuRkx5XcZTCznsh9kfY4SazRvv2TpkV1njmjatAUTvX6_LDaNyn7SxbEWibA_CIcXWGpMk0MsEg3v-apTSqn8E0vbnZkwAOD9wPwil6AUwkjdVSaPHwrXz20VaLY86A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://farahutspbf.sipsimpangan.com/public/api/product",
+							"protocol": "https",
+							"host": [
+								"farahutspbf",
+								"sipsimpangan",
+								"com"
+							],
+							"path": [
+								"public",
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW5pc3RyYXRvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjI0OTA0MSwiZXhwIjoxNzE2MjU2MjQxfQ.h8QRl69d4WwqDxJUa1Qs39avjoNrNo7ti4ajyy-fhSQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "       {\r\n            \"category_id\": 1,\r\n            \"name\": \"BNB Barenblis Blomatte Eyeshadow\",\r\n            \"description\": \"Eyeshadow Special Autumn\",\r\n            \"price\": 120000,\r\n            \"image\": \"img.jpg\",\r\n            \"expired_at\": \"2026-12-12\",\r\n            \"modified_by\": \"admin@gmail.com\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://farahutspbf.sipsimpangan.com/public/api/delete",
+							"protocol": "https",
+							"host": [
+								"farahutspbf",
+								"sipsimpangan",
+								"com"
+							],
+							"path": [
+								"public",
+								"api",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW5pc3RyYXRvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjI0NTQ5MywiZXhwIjoxNzE2MjUyNjkzfQ.gr_bUvhqnzaFdemXXVWikhqejqBnX4w86WiSJjyjsBI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Korean Outfit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://farahutspbf.sipsimpangan.com/public/api/categories",
+							"protocol": "https",
+							"host": [
+								"farahutspbf",
+								"sipsimpangan",
+								"com"
+							],
+							"path": [
+								"public",
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW5pc3RyYXRvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjI0NTQ5MywiZXhwIjoxNzE2MjUyNjkzfQ.gr_bUvhqnzaFdemXXVWikhqejqBnX4w86WiSJjyjsBI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Korean Outfits\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://farahutspbf.sipsimpangan.com/public/api/categories/3",
+							"protocol": "https",
+							"host": [
+								"farahutspbf",
+								"sipsimpangan",
+								"com"
+							],
+							"path": [
+								"public",
+								"api",
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW5pc3RyYXRvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjI0NTQ5MywiZXhwIjoxNzE2MjUyNjkzfQ.gr_bUvhqnzaFdemXXVWikhqejqBnX4w86WiSJjyjsBI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://farahutspbf.sipsimpangan.com/public/api/categories",
+							"protocol": "https",
+							"host": [
+								"farahutspbf",
+								"sipsimpangan",
+								"com"
+							],
+							"path": [
+								"public",
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW5pc3RyYXRvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjI0ODUyNCwiZXhwIjoxNzE2MjU1NzI0fQ.iOD6CZt15nszmz0xwlYmcuDhYgpUXELsoaBlCCzSCOs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Korean Outfits\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://farahutspbf.sipsimpangan.com/public/api/delete",
+							"protocol": "https",
+							"host": [
+								"farahutspbf",
+								"sipsimpangan",
+								"com"
+							],
+							"path": [
+								"public",
+								"api",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"name\" : \"Mark\",\r\n    \"email\" : \"mark99@gmail.com\",\r\n    \"password\" : \"mark99\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://farahutspbf.sipsimpangan.com/public/api/register",
+					"protocol": "https",
+					"host": [
+						"farahutspbf",
+						"sipsimpangan",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://farahutspbf.sipsimpangan.com/public/api/login",
+					"protocol": "https",
+					"host": [
+						"farahutspbf",
+						"sipsimpangan",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register With Oauth Google",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "FARAH-UTS TOKEN ",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "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",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "777285484625-f347c7qkodnh31vmuc2inbovmi89t6pi.apps.googleusercontent.com",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/userinfo.email",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.google.com/o/oauth2/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.google.com/o/oauth2/auth",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://farahutspbf.sipsimpangan.com/public/api/auth/google/call-back",
+					"protocol": "https",
+					"host": [
+						"farahutspbf",
+						"sipsimpangan",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"auth",
+						"google",
+						"call-back"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
